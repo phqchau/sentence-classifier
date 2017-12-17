@@ -22,11 +22,6 @@ contents = regexprep(contents, ...
 % Look for strings with @ in the middle
 contents = regexprep(contents, '[^\s]+@[^\s]+', 'emailaddr');
 
-% Prints the abstract to screen
-fprintf('\n==== Processed Abstract ====\n\n');
-
-l = 0;
-
 while ~isempty(contents)
     [word, contents] = ...
        strtok(contents, ...
@@ -51,15 +46,6 @@ while ~isempty(contents)
         word_indices = [ word_indices ; i];
       end
     end
-
-    if (l + length(word) + 1) > 78
-        fprintf('\n');
-        l = 0;
-    end
-    fprintf('%s ', word);
-    l = l + length(word) + 1;
 end
-
-fprintf('\n\n=========================\n');
 
 end

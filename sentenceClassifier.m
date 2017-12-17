@@ -34,7 +34,7 @@ p = svmPredict(model, X);
 fprintf('Training Accuracy: %f\n', mean(double(p == y)) * 100);
 pause;
 
-%% ================= Part 3: Top Predictors of Spam ====================
+%% =========== Part 3: Top Predictors of Problem Sentence ================
 %  Finds the words with the highest weights in the classifier.
 
 [weight, idx] = sort(model.w, 'descend');
@@ -60,9 +60,8 @@ for rowIdx = 1:numRows
   word_indices = processAbstract(str);
   x = abstractFeatures(word_indices);
   p = svmPredict(model, x);
-  fprintf('\nProcessed %s\n\nSentence Classification: %d\n', str, p);
   if (p == 1)
-    %fprintf('%s ', str);
-    %fprintf('\nProcessed %s\n\nSentence Classification: %d\n', str, p);
+    fprintf('%s ', str);
+    fprintf('\nProcessed %s\n\nSentence Classification: %d\n', str, p);
   end
 end
