@@ -1,6 +1,8 @@
+% Original code obtained from Coursera, Machine Learning Week 7: SVMs
+
 function vocabList = getVocabList()
 
-%% Read the fixed vocabulary list
+% Read the fixed vocabulary list
 fid = fopen('vocab.txt');
 
 % Store all dictionary words in cell array vocab{}

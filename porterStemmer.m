@@ -1,3 +1,5 @@
+% Original code obtained from Coursera, Machine Learning Week 7: SVMs
+
 function stem = porterStemmer(inString)
 % Applies the Porter Stemming algorithm as presented in the following
 % paper:

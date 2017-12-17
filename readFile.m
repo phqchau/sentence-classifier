@@ -1,3 +1,5 @@
+% Original code obtained from Coursera, Machine Learning Week 7: SVMs
+
 function file_contents = readFile(filename)
 
 fid = fopen(filename);
