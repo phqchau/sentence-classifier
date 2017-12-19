@@ -14,6 +14,5 @@ for iFile = 1:numel(file_list)
   [X, y] = trainSen(file_name);
 end
 
-save('senTrain.mat', 'X');
-save('senTrain.mat', 'y');
+save('senTrain.mat', 'X', 'y');
 end
