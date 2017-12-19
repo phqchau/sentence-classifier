@@ -1,4 +1,4 @@
-function data_files = trainSvm(data_files)
+function [X, y] = trainSvm(data_files)
 %  Feature Extraction from Training Data
 %  Convert each sentence of an abstract into a vector of features in R^n.
 %  The extracted feature vectors will be used to train the SVM.
