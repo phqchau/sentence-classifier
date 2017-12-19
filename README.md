@@ -10,10 +10,10 @@ The data is used to train a linear SVM to identify problem sentences (purpose se
 abstractsample1.txt is a sample unlabeled file.
 
 <b>HOW TO USE</b>
-Step 1: Install and run <a
+
+<i>Step 1:</i> Install and run <a
 href="http://wiki.octave.org/Octave_for_Microsoft_Windows">Octave</a>.
-Step 2: Run the command <b>trainSvm('data/\*.txt')</b> if you want to train the SVM yourself.
-This could take up to 5 minutes to finish.
-Step 2: Run <b>sentenceClassifier</b> and the program will analyze the abstractsample1.txt file,
-outputting the result to the screen. If you would like to use your own file, simply put it in the
-directory and change line 35 in sentenceClassifier.m to the right file name.
+
+<i>Step 2:</i> Run the command <b>trainSvm('data/\*.txt')</b> if you want to train the SVM yourself. This could take up to 5 minutes to finish.
+
+<i>Step 3:</i> Run <b>sentenceClassifier</b> and the program will analyze the abstractsample1.txt file, outputting the result to the screen. If you would like to use your own file, simply put it in the directory and change line 35 in sentenceClassifier.m to the right file name.
