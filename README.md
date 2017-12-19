@@ -3,7 +3,7 @@
 
 With references to the material of the <a href="https://www.coursera.org/learn/machine-learning">Machine Learning course</a> taught by Andrew Ng on Coursera, especially the programming material of Week 7: Support Vector Machines.
 
-The labeled training data used is found in the data folder. Obtained from <a href="https://archive.ics.uci.edu/ml/datasets/Sentence+Classification">here</a>.
+The labeled training data used is found in the data folder. Obtained from the <a href="https://archive.ics.uci.edu/ml/datasets/Sentence+Classification">UC Irvine Machine Learning Repository</a>.
 
 The data is used to train a linear SVM to identify problem sentences (purpose sentences) in a scientific abstract.
 
