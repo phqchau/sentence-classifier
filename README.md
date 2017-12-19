@@ -14,6 +14,6 @@ abstractsample1.txt is a sample unlabeled file.
 <i>Step 1:</i> Install and run <a
 href="http://wiki.octave.org/Octave_for_Microsoft_Windows">Octave</a>.
 
-<i>Step 2:</i> Run the command <b>trainSvm('data/\*.txt')</b> if you want to train the SVM yourself. This could take up to 5 minutes to finish.
+<i>Step 2:</i> Run the command <b>trainSvm('data/\*.txt')</b> if you want to train the SVM yourself. This could take up to 5 minutes to finish. Otherwise the extracted data already exist in senTrain.mat and will be loaded to the SVM in the next step.
 
 <i>Step 3:</i> Run <b>sentenceClassifier</b> and the program will analyze the abstractsample1.txt file, outputting the result to the screen. If you would like to use your own file, simply put it in the directory and change line 35 in sentenceClassifier.m to the right file name.
