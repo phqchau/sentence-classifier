@@ -1,25 +1,7 @@
 %% Initialization
 clear ; close all; clc
 
-%% ========== Part 1: Feature Extraction from Training Data ================
-%  Convert each sentence of an abstract into a vector of features in R^n.
-%  The extracted feature vectors will be used to train the SVM.
-fprintf('\nExtracting features from training data\n');
-
-file_list = dir('data/*.txt');
-X = [];
-y = [];
-for iFile = 1:numel(file_list)
-  file_name = strcat('data/', file_list(iFile).name);
-  [X, y] = trainSen(file_name);
-end
-save('senTrain.mat', 'X');
-save('senTrain.mat', 'y');
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
-%% =========== Part 2: Train Linear SVM for Sentence Classification ========
+%% =========== Part 1: Train Linear SVM for Sentence Classification ========
 % Load the labeled training dataset
 load('senTrain.mat');
 
@@ -34,7 +16,7 @@ p = svmPredict(model, X);
 fprintf('Training Accuracy: %f\n', mean(double(p == y)) * 100);
 pause;
 
-%% =========== Part 3: Top Predictors of Problem Sentence ================
+%% =========== Part 2: Top Predictors of Problem Sentence ================
 %  Finds the words with the highest weights in the classifier.
 
 [weight, idx] = sort(model.w, 'descend');
@@ -49,7 +31,7 @@ fprintf('\n\n');
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
-%% =================== Part 4: Analyze Unlabeled Data =====================
+%% =================== Part 3: Analyze Unlabeled Data =====================
 filename = 'abstractsample1.txt';
 
 contents = readFile(filename);
